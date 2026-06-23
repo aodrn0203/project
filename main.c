@@ -2,11 +2,6 @@
  *  허프만 코딩 텍스트 압축기 (유니코드 문자 단위)
  *  컴파일: gcc main.c -o huffman
  *  실행:   ./huffman     (윈도우는 huffman.exe)
- *
- *  [핵심 변경]
- *  기존에는 UTF-8 "바이트"를 심볼로 다뤄 한글 한 글자가 3바이트로
- *  쪼개져 처리됐다. 이제는 UTF-8을 디코딩해 "유니코드 코드포인트"
- *  하나를 심볼 하나로 다룬다.  예) '다' -> 1개의 심볼
  * ============================================================ */
 
 #define _POSIX_C_SOURCE 200809L
@@ -144,7 +139,7 @@ void heapPush(MinHeap* h, Node* node) {
 
 /* 힙에서 가장 작은 노드를 꺼낸다 (아래로 내려가며 제자리 찾기) */
 Node* heapPop(MinHeap* h) {
-    Node* min = h->data[0];
+    Node* min = h->data[0]; 
     h->data[0] = h->data[--h->size];
     int i = 0;
     while (1) {
