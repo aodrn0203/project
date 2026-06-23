@@ -1,6 +1,8 @@
 .cache/
 .vscode/
 build/
+latex/
+.idea/
 Doxyfile
 *.vsix
 *.code-workspace
