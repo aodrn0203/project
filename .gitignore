@@ -1,7 +1,7 @@
-.cache
-.vscode
+.cache/
+.vscode/
 build/
-*.vsix
 Doxyfile
+*.vsix
 *.code-workspace
 *.json

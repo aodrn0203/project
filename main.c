@@ -375,7 +375,7 @@ int main(void) {
         int tlen = (int)strlen(text);
         if (tlen > 0 && text[tlen - 1] == '\n') text[tlen - 1] = '\0';
 
-        runHuffman(text);
+        runHuffman(text); //
     }
     return 0;
 }
