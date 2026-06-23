@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/workspace/project/cmake-build-debug",
+  "command": "C:\\mingw64\\bin\\gcc.exe -g -std=gnu11 -fdiagnostics-color=always -o CMakeFiles\\project.dir\\main.c.obj -c C:\\workspace\\project\\main.c",
+  "file": "C:/workspace/project/main.c",
+  "output": "C:/workspace/project/cmake-build-debug/CMakeFiles/project.dir/main.c.obj"
+}
+]

@@ -1,0 +1,8 @@
+.cache
+.vscode
+.json
+build/
+latex/
+.vsix
+Doxyfile
+.code-workspace
