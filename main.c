@@ -17,6 +17,7 @@
 
 #define MAX_TEXT    10000   /* 입력 텍스트 최대 바이트 길이 */
 #define MAX_SYMBOLS 4096    /* 서로 다른 문자(코드포인트) 최대 개수 */
+/* 코드 포인트는 컴퓨터가 텍스트를 표현하기 위해 문자에 할당한 고유한 정수값 */
 
 /* ------------------------------------------------------------
  *  0) UTF-8  <->  코드포인트 변환
@@ -33,7 +34,7 @@ static int utf8Decode(const unsigned char* s, uint32_t* cp) {
         *cp = ((uint32_t)(c & 0x1F) << 6)
             |  (uint32_t)(s[1] & 0x3F);
         return 2;
-    } else if ((c & 0xF0) == 0xE0) { /* 1110xxxx : 3바이트 (한글 대부분) */
+    } else if ((c & 0xF0) == 0xE0) { /* 1110xxxx : 3바이트 */
         *cp = ((uint32_t)(c & 0x0F) << 12)
             | ((uint32_t)(s[1] & 0x3F) << 6)
             |  (uint32_t)(s[2] & 0x3F);
